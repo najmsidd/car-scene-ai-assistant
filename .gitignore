@@ -1,0 +1,16 @@
+# Ignore video files
+videos/
+
+# Ignore detection results
+detections/
+
+# Ignore temporary or intermediate files (e.g., processed images)
+*.jpg
+*.mp4
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment (if you are using one)
+venv/
