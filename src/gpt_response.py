@@ -18,4 +18,15 @@ def build_prompt(scene_dict):
 def gpt_response(prompt):
     with model.chat_session():
         return model.generate(prompt)
+    
+def build_driver_prompt(detection_dict):
+    objects = [f"{v} {k}{'s' if v > 1 else ''}" for k,v in detection_dict.items()]
+    object_str = ", ".join(objects)
+    return (
+        f"Scene summary: There are {object_str} in the current frame.\n"
+        "Task: What should the driver do now?\n"
+        "Instructions: Respond with clear driving advice in one or two sentences"
+    )
+    
+
 

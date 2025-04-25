@@ -1,6 +1,6 @@
 import streamlit as st
 from detect import detect_image
-from gpt_response import build_prompt, gpt_response
+from gpt_response import build_prompt, gpt_response, build_driver_prompt
 import os
 from PIL import Image
 
@@ -27,12 +27,20 @@ if uploaded_file is not None:
         st.write(object_counts)
 
         builded_prompt = build_prompt(object_counts)
-        st.subheader("Generated Prompt:")
+        st.subheader("Scene Description Prompt:")
         st.code(builded_prompt)
 
         gpt_generated_response = gpt_response(builded_prompt)
-        st.subheader("GPT Generated response:")
+        st.subheader("GPT Scene response:")
         st.write(gpt_generated_response)
+
+        driver_prompt = build_driver_prompt(object_counts)
+        st.subheader("Driver Recommendations Prompt:")
+        st.code(driver_prompt)
+
+        gpt_driver_response = gpt_response(driver_prompt)
+        st.subheader("GPT Driver Recommendations")
+        st.write(gpt_driver_response)
 
         with open(output_file_path, "rb") as img_file:
             st.download_button(label="Download analyzed image", data=img_file, file_name=output_file_path)
