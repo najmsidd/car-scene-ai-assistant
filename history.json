@@ -1,0 +1,16 @@
+[
+    {
+        "timestamp": "2025-04-30 16-48-55",
+        "filename": "scene1.jpg",
+        "object_counts": {
+            "car": 3,
+            "person": 3,
+            "truck": 1,
+            "stop sign": 1,
+            "traffic light": 1
+        },
+        "scene_description": " The scene is a busy intersection with multiple vehicles and pedestrians present. There is a car approaching from the left, another car approaching from the right, and a third car parked on the side of the road. Additionally, there is a truck driving down the street, a stop sign at one end of the intersection, and a traffic light controlling the flow of traffic.\n\nAs a driver, you should be aware of all the vehicles and pedestrians around you and follow the rules of the road to ensure your safety and the safety of others. You should also pay attention to any signs or signals that may affect your movement, such as the stop sign and traffic light. If necessary, slow down and come to a complete stop at the stop sign before proceeding through the intersection. Always use turn signals when turning or changing lanes, and be cautious of other drivers' actions.",
+        "driver_recommendations": " The driver should slow down and come to a complete stop behind the stop sign before proceeding when the road ahead is clear.",
+        "input_type": "Image"
+    }
+]
